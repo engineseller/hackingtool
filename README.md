@@ -244,14 +244,20 @@ cd hackingtool
 sudo pip3 install -r requirements.txt
 bash install.sh
 sudo hackingtool
-
 ```
 
 ## Use image with Docker locally
 
-`docker-compose build`
+```bash
+# Pull the latest images
+docker compose pull
 
-`docker-compose run hackingtool`
+# Start the services (in detached mode)
+docker compose up -d
+
+# Stop the services
+# docker compose down -v
+```
 
 - If need open other ports you can edit the docker-compose.yml file
 - Volumes are mounted in the container to persist data and can share files between the host and the container
